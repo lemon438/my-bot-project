@@ -12,7 +12,7 @@ client.on("interactionCreate", async (interaction) => {
       interaction.reply("Pong! :ping_pong:")
     }
     if(interaction.commandName === "cmds") {
-      interaction.reply("Commands: **`ping`**, **`cmds`**, **`kill`**, **`wack`**, **`explode`**, **`yes`**, **`skull`**")
+      interaction.reply("Commands: **`ping`**, **`cmds`**, **`kill`**, **`wack`**, **`explode`**, **`yes`**, **`skull`**, **`invite`**")
     }
     if(interaction.commandName === "kill") {
       interaction.reply("**dies**")
