@@ -35,7 +35,11 @@ const slashRegister = async () => {
 
         new SlashCommandBuilder()
        .setName("skull")
-       .setDescription("💀")
+       .setDescription("💀"), 
+
+        new SlashCommandBuilder()
+       .setName("invite")
+       .setDescription("Invite the bot to your server!")
       ]
     })
   } catch (error) {
