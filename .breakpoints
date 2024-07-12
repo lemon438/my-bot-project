@@ -1,0 +1,20 @@
+{
+  "files": {
+    "bot-status.js": [
+      {
+        "id": "071d9e00-0bc0-4482-bbaf-1765fc9deb3f",
+        "line": 7,
+        "version": 146,
+        "index": 150
+      }
+    ],
+    "embed.js": [
+      {
+        "id": "6bc057ea-8a3c-4e95-acf2-7e16ddb09476",
+        "line": 10,
+        "version": 241,
+        "index": 248
+      }
+    ]
+  }
+}
