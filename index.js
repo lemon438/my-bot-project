@@ -29,6 +29,9 @@ client.on("interactionCreate", async (interaction) => {
     if(interaction.commandName === "skull") {
       interaction.reply("💀")
     }
+    if(interaction.commandName === "invite") {
+      interaction.reply("https://discord.com/oauth2/authorize?client_id=1260863388129431625&permissions=608017011179127&integration_type=0&scope=bot")
+    }
   }
 })
 
