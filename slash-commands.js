@@ -40,6 +40,16 @@ const slashRegister = async () => {
         new SlashCommandBuilder()
        .setName("invite")
        .setDescription("Invite the bot to your server!")
+
+        new SlashCommandBuilder()
+       .setName("text")
+       .setDescription("Just a slash command with options")
+       .addStringOption(option => {
+         return option
+        .setName("text")
+        .setDescription("The text you want to say")
+        .setRequired(true)
+       })
       ]
     })
   } catch (error) {
