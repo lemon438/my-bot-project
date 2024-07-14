@@ -49,6 +49,8 @@ const slashRegister = async () => {
         .setName("text")
         .setDescription("The text you want to say")
         .setRequired(true)
+        .setMinLength(2)
+        .setMaxLength(35)
        })
       ]
     })
