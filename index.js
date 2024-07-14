@@ -12,7 +12,7 @@ client.on("interactionCreate", async (interaction) => {
       interaction.reply("Pong! :ping_pong:")
     }
     if(interaction.commandName === "cmds") {
-      interaction.reply("Commands: **`ping`**, **`cmds`**, **`kill`**, **`wack`**, **`explode`**, **`yes`**, **`skull`**, **`invite`**")
+      interaction.reply("Commands: **`ping`**, **`cmds`**, **`kill`**, **`wack`**, **`explode`**, **`yes`**, **`skull`**, **`invite`**, **`text`**")
     }
     if(interaction.commandName === "kill") {
       interaction.reply("**dies**")
@@ -31,6 +31,10 @@ client.on("interactionCreate", async (interaction) => {
     }
     if(interaction.commandName === "invite") {
       interaction.reply("https://discord.com/oauth2/authorize?client_id=1260863388129431625&permissions=608017011179127&integration_type=0&scope=bot")
+    }
+    if(interaction.commandName === "text") {
+      const textRecieved = interaction.options.getString("text")
+      interaction.reply({ content: `You said ${textRecieved}`, ephemeral: true })
     }
   }
 })
