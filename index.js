@@ -4,6 +4,10 @@ const keep_alive = require('./keep_alive.js')
 
 client.on("ready", () => {
   console.log("The bot is online!")
+
+  client.user.setActivity({
+    name: 'skulling💀', 
+  })
 })
 
 client.on("interactionCreate", async (interaction) => {
