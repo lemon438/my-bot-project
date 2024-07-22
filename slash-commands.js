@@ -52,6 +52,28 @@ const slashRegister = async () => {
         .setMinLength(2)
         .setMaxLength(35)
        })
+        new SlashCommandBuilder()
+    .setName("kick")
+    .setDescription("Kicks a user")
+    .addUserOption(option => {
+        return option
+            .setName("user")
+            .setDescription("Select a user")
+            .setRequired(true)
+       })
+    .addBooleanOption(option => {
+        return option
+            .setName("dm")
+            .setDescription("Whether to DM the user or not")
+            .setRequired(true)
+       })
+    .addStringOption(option => {
+        return option
+            .setName("reason")
+            .setDescription("The reason for kicking the user")
+            .setRequired(false)
+            .setMaxLength(150)
+       })
       ]
     })
   } catch (error) {
