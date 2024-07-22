@@ -43,31 +43,6 @@ client.on("interactionCreate", async (interaction) => {
       const textRecieved = interaction.options.getString("text")
       interaction.reply({ content: `You said ${textRecieved}`, ephemeral: true })
     }
-    if(interaction.commandName === "kick") {
-      if (!(interaction.member.permissions.bitfield & BigInt(0x00000002))) {
-    return interaction.reply({ content: "You do not have permission to use this command.", ephemeral: true });
-      }
-    if (!interaction.member.permissions.bitfield & requiredPermission) {
-        return interaction.reply({ content: "You do not have permission to use this command.", ephemeral: true });
-    }
-    const user = interaction.options.getUser("user");
-    const dm = interaction.options.getBoolean("dm");
-    const reason = interaction.options.getString("reason");
-    const member = interaction.guild.members.cache.get(user.id);
-    if (!member) {
-        return interaction.reply({ content: "User not found!", ephemeral: true })
-    }
-    try {
-        if (dm) {
-            await user.send(`You have been kicked from **${interaction.guild.name}**. Reason: **${reason}**`);
-        }
-        await member.kick();
-        await interaction.reply(`${user.tag} has been kicked from the server!`);
-    } catch (error) {
-        console.error(error);
-        await interaction.reply({ content: "An error occurred while trying to kick the user.", ephemeral: true });
-    }
-    }
   }
 })
 
