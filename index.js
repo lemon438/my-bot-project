@@ -41,7 +41,9 @@ client.on("interactionCreate", async (interaction) => {
       interaction.reply({ content: `You said ${textRecieved}`, ephemeral: true })
     }
     if(interaction.commandName === "kick") {
-    const requiredPermission = BigInt(0x00000002);
+      if (!(interaction.member.permissions.bitfield & BigInt(0x00000002))) {
+    return interaction.reply({ content: "You do not have permission to use this command.", ephemeral: true });
+      }
     if (!interaction.member.permissions.bitfield & requiredPermission) {
         return interaction.reply({ content: "You do not have permission to use this command.", ephemeral: true });
     }
