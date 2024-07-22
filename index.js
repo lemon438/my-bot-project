@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const { Permissions, ActivityType }
+const { Permissions, ActivityType } = require("discord.js");
 const client = new Discord.Client({ intents: ["Guilds"] })
 const keep_alive = require('./keep_alive.js')
 
