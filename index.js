@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const { Permissions, ActivityType }
 const client = new Discord.Client({ intents: ["Guilds"] })
 const keep_alive = require('./keep_alive.js')
 
@@ -6,7 +7,9 @@ client.on("ready", () => {
   console.log("The bot is online!")
 
   client.user.setActivity({
-    name: 'skulling💀', 
+    name: 'Youtube', 
+    type: ActivityType.Streaming, 
+    url: "https://youtube.com/watch?v=dQw4w9WgXcQ"
   })
 })
 
