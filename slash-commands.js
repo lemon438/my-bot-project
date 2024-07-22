@@ -15,7 +15,7 @@ const slashRegister = async () => {
 
         new SlashCommandBuilder()
        .setName("cmds")
-       .setDescription("Shows all commands!"), 
+       .setDescription("Shows all commands expect admin commands!"), 
 
         new SlashCommandBuilder()
        .setName("kill")
