@@ -8,7 +8,7 @@ client.on("ready", () => {
 
   client.user.setActivity({
     name: 'Something funny.', 
-    type: ActivityType.Watching
+    type: Discord.ActivityType.Watching
   })
 })
 
